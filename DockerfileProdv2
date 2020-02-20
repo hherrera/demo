@@ -1,0 +1,4 @@
+FROM nginx:stable-alpine
+MAINTAINER Mario Inga <mario21ic@gmail.com>
+
+COPY ./htmlv2/ /usr/share/nginx/html/

@@ -1,0 +1,12 @@
+version: "2"
+services:
+  prod:
+    image: hherrera1974/web01:prod
+    build:
+      context: ./
+
+  prod_v2:
+    image: hherrera1974/web01:prodv2
+    build:
+      context: ./
+      dockerfile: ./DockerfileProdv2
