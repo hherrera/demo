@@ -27,7 +27,7 @@ services:
         parallelism: 2
       # placement constraint - 'worker' or 'manager'
       placement:
-        constraints: [node.role == manager]
+        constraints: [node.role == worker]
 
 #volumes:
 #  logs_nginx:
