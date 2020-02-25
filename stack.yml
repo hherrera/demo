@@ -33,10 +33,9 @@ services:
       # placement constraint - 'worker' or 'manager'
       placement:
         constraints: [node.role == worker]
+    networks:
+        - traefik-net
 
-networks:
-  traefik-net:
-    external: true
 
          
 #volumes:
