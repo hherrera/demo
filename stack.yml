@@ -3,7 +3,7 @@ services:
   web:
     image: hherrera1974/web01:prod
     ports:
-      - 80:80
+      - 8088:80
     # service deployment
     deploy:
       labels:
