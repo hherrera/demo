@@ -3,7 +3,7 @@ services:
   web:
     image: hherrera1974/web01:prod
     ports:
-      - 8088:80
+      - 80:80
     # service deployment
     deploy:
       labels:
@@ -33,8 +33,10 @@ services:
       # placement constraint - 'worker' or 'manager'
       placement:
         constraints: [node.role == worker]
-    
-      
+
+networks:
+  traefik-net:
+    external: true
 
          
 #volumes:
