@@ -2,8 +2,8 @@ version: "3.5"
 services:
   web:
     image: hherrera1974/web01:prod
-    ports:
-      - 8081:80
+   # ports:
+   #   - 80:80
     # service deployment
     deploy:
       # replicated or global
@@ -29,11 +29,11 @@ services:
       placement:
         constraints: [node.role == worker]
     labels:
-      traefik.frontend.rule: Host:demo.sw.local
-      traefik.port: 80
+      traefik.frontend.rule: Host:demo.${CLUSTER_DOMAIN}
+      traefik.port: "80"
       traefik.docker.network: traefik-net
       
 
          
-          #volumes:
+#volumes:
 #  logs_nginx:
